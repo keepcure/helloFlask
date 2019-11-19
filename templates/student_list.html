@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+    <ul>
+        {% for row in rows %}
+            <li style="background: antiquewhite">
+                <p>Name {{ row['name'] }}</p>
+                <p>Address {{ row['addr'] }}</p>
+                <p>City {{ row['city'] }}</p>
+                <p>Pin {{ row['pin'] }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

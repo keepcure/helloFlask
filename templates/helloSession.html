@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>helloSession</title>
+</head>
+<body>
+    {% if type == 'login' %}
+        <form action="http://localhost:5000/sessionlogin" method="post">
+            <p><input type="text" name="username"/></p>
+            <input type="submit" value="sessionToLogin"/>
+        </form>
+
+    {% elif type == 'logout' %}
+        Logged in as {{ username }} <br>
+        <b><a href = 'http://localhost:5000/sessionlogout' method="post">click here to log out</a></b>
+
+    {% else %}
+        You are not logged in <br>
+        <a href = 'http://localhost:5000/sessionlogin' method="post"><b>click here to log in</b></a>
+    {% endif %}
+</body>
+</html>
